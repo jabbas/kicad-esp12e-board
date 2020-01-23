@@ -1,0 +1,269 @@
+EESchema Schematic File Version 4
+LIBS:esp12e-ssr-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+NoConn ~ -400 4000
+NoConn ~ 6150 9900
+$Comp
+L power:GND #PWR?
+U 1 1 5E2A2F54
+P 6600 4650
+F 0 "#PWR?" H 6600 4400 50  0001 C CNN
+F 1 "GND" H 6605 4477 50  0000 C CNN
+F 2 "" H 6600 4650 50  0001 C CNN
+F 3 "" H 6600 4650 50  0001 C CNN
+	1    6600 4650
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4800 4650 0    50   Input ~ 0
++3.3V
+NoConn ~ 5450 5150
+NoConn ~ 5550 5150
+NoConn ~ 5650 5150
+NoConn ~ 5750 5150
+NoConn ~ 5950 5150
+NoConn ~ 5850 5150
+NoConn ~ 6600 4550
+NoConn ~ 6600 4450
+NoConn ~ 6600 4350
+$Comp
+L ESP8266:ESP-12E U?
+U 1 1 5E297A2C
+P 5700 4250
+F 0 "U?" H 5700 5015 50  0000 C CNN
+F 1 "ESP-12E" H 5700 4924 50  0000 C CNN
+F 2 "" H 5700 4250 50  0001 C CNN
+F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 5700 4250 50  0001 C CNN
+	1    5700 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J?
+U 1 1 5E2A54B0
+P 5700 2300
+F 0 "J?" V 5796 2012 50  0000 R CNN
+F 1 "Conn_02x05_Odd_Even" V 5705 2012 50  0000 R CNN
+F 2 "" H 5700 2300 50  0001 C CNN
+F 3 "~" H 5700 2300 50  0001 C CNN
+	1    5700 2300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4550 7450 4550 7300
+Wire Wire Line
+	5500 7300 5950 7300
+Connection ~ 5500 7300
+Wire Wire Line
+	5100 7300 5500 7300
+Connection ~ 5100 7300
+Wire Wire Line
+	4550 7300 5100 7300
+Connection ~ 4550 7300
+Wire Wire Line
+	4050 7300 4550 7300
+Wire Wire Line
+	4550 7000 4050 7000
+Connection ~ 4550 7000
+Wire Wire Line
+	4050 7000 3950 7000
+Connection ~ 4050 7000
+Wire Wire Line
+	4800 7000 4550 7000
+Wire Wire Line
+	5500 7000 5400 7000
+Connection ~ 5500 7000
+Connection ~ 5950 7000
+Wire Wire Line
+	5950 7000 5500 7000
+$Comp
+L power:GND #PWR?
+U 1 1 5E2CF607
+P 5100 7300
+F 0 "#PWR?" H 5100 7050 50  0001 C CNN
+F 1 "GND" H 5105 7127 50  0000 C CNN
+F 2 "" H 5100 7300 50  0001 C CNN
+F 3 "" H 5100 7300 50  0001 C CNN
+	1    5100 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 7000 5950 7000
+$Comp
+L Device:C C?
+U 1 1 5E2CA7D4
+P 5950 7150
+F 0 "C?" H 6065 7196 50  0000 L CNN
+F 1 "1uF" H 6065 7105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5988 7000 50  0001 C CNN
+F 3 "~" H 5950 7150 50  0001 C CNN
+	1    5950 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E2C9EE9
+P 5500 7150
+F 0 "C?" H 5615 7196 50  0000 L CNN
+F 1 "4.7uF" H 5615 7105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5538 7000 50  0001 C CNN
+F 3 "~" H 5500 7150 50  0001 C CNN
+	1    5500 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E2C9B4B
+P 4050 7150
+F 0 "C?" H 4165 7196 50  0000 L CNN
+F 1 "4.7uF" H 4165 7105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4088 7000 50  0001 C CNN
+F 3 "~" H 4050 7150 50  0001 C CNN
+	1    4050 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E2C885E
+P 4550 7150
+F 0 "C?" H 4665 7196 50  0000 L CNN
+F 1 "1uF" H 4665 7105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4588 7000 50  0001 C CNN
+F 3 "~" H 4550 7150 50  0001 C CNN
+	1    4550 7150
+	1    0    0    -1  
+$EndComp
+Text GLabel 6250 7000 2    50   Output ~ 0
++3.3V
+Text GLabel 3950 7000 0    50   Input ~ 0
++5V
+$Comp
+L Regulator_Linear:AMS1117-3.3 U?
+U 1 1 5E27B7A0
+P 5100 7000
+F 0 "U?" H 5100 7242 50  0000 C CNN
+F 1 "AMS1117-3.3" H 5100 7151 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 5100 7200 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 5200 6750 50  0001 C CNN
+	1    5100 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 7450 4550 7450
+Wire Wire Line
+	3650 6350 3650 7450
+Wire Wire Line
+	4050 6350 3650 6350
+Wire Wire Line
+	4050 7000 4050 6450
+$Comp
+L Connector:Conn_01x02_Female J?
+U 1 1 5E30DECD
+P 4250 6350
+F 0 "J?" H 4278 6326 50  0000 L CNN
+F 1 "5V AUX" H 4278 6235 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 4250 6350 50  0001 C CNN
+F 3 "~" H 4250 6350 50  0001 C CNN
+	1    4250 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E2BA61A
+P 5500 2600
+F 0 "#PWR?" H 5500 2350 50  0001 C CNN
+F 1 "GND" H 5505 2427 50  0000 C CNN
+F 2 "" H 5500 2600 50  0001 C CNN
+F 3 "" H 5500 2600 50  0001 C CNN
+	1    5500 2600
+	1    0    0    -1  
+$EndComp
+Text GLabel 5900 2100 1    50   Output ~ 0
++5V
+Wire Wire Line
+	6600 3950 6600 3200
+Wire Wire Line
+	6600 3200 5250 3200
+Wire Wire Line
+	5250 3200 5250 2100
+Wire Wire Line
+	5250 2100 5500 2100
+Wire Wire Line
+	6600 4050 6700 4050
+Wire Wire Line
+	6700 4050 6700 3100
+Wire Wire Line
+	6700 3100 5900 3100
+Wire Wire Line
+	5900 3100 5900 2600
+Wire Wire Line
+	5800 2600 5800 3000
+Wire Wire Line
+	5800 3000 6800 3000
+Wire Wire Line
+	6800 3000 6800 4150
+Wire Wire Line
+	6800 4150 6600 4150
+Wire Wire Line
+	5700 2600 5700 2900
+Wire Wire Line
+	5700 2900 6900 2900
+Wire Wire Line
+	6900 2900 6900 4250
+Wire Wire Line
+	6900 4250 6600 4250
+Wire Wire Line
+	4800 4250 4700 4250
+Wire Wire Line
+	4700 4250 4700 2900
+Wire Wire Line
+	4700 2900 5600 2900
+Wire Wire Line
+	5600 2900 5600 2600
+Wire Wire Line
+	4800 4350 4600 4350
+Wire Wire Line
+	4600 4350 4600 2000
+Wire Wire Line
+	4600 2000 5600 2000
+Wire Wire Line
+	5600 2000 5600 2100
+Wire Wire Line
+	4800 4450 4500 4450
+Wire Wire Line
+	4500 4450 4500 1900
+Wire Wire Line
+	4500 1900 5700 1900
+Wire Wire Line
+	5700 1900 5700 2100
+Wire Wire Line
+	4800 4550 4400 4550
+Wire Wire Line
+	4400 4550 4400 1800
+Wire Wire Line
+	4400 1800 5800 1800
+Wire Wire Line
+	5800 1800 5800 2100
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5E2C88BC
+P 4950 3400
+F 0 "SW?" V 4904 3548 50  0000 L CNN
+F 1 "SW_Push" V 4995 3548 50  0000 L CNN
+F 2 "" H 4950 3600 50  0001 C CNN
+F 3 "~" H 4950 3600 50  0001 C CNN
+	1    4950 3400
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC
