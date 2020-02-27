@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:esp12e-board-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -22,7 +23,6 @@ NoConn ~ 5650 5150
 NoConn ~ 5750 5150
 NoConn ~ 5950 5150
 NoConn ~ 5850 5150
-NoConn ~ 6600 4550
 $Comp
 L ESP8266:ESP-12E U2
 U 1 1 5E297A2C
@@ -165,8 +165,6 @@ Wire Wire Line
 	6600 4050 6650 4050
 Wire Wire Line
 	6650 4050 6650 2250
-Wire Wire Line
-	4800 4250 4700 4250
 $Comp
 L power:GND #PWR01
 U 1 1 5E2CF607
@@ -222,19 +220,9 @@ $EndComp
 Text GLabel 5650 2750 3    50   Input ~ 0
 +5V
 Wire Wire Line
-	4750 4550 4750 2800
-Wire Wire Line
-	4750 2800 5450 2800
-Wire Wire Line
 	5450 2800 5450 2750
 Wire Wire Line
-	4750 4550 4800 4550
-Wire Wire Line
 	5550 2750 5550 2850
-Wire Wire Line
-	5550 2850 4700 2850
-Wire Wire Line
-	4700 2850 4700 4250
 Wire Wire Line
 	6600 3050 5750 3050
 Wire Wire Line
@@ -246,25 +234,7 @@ Wire Wire Line
 Wire Wire Line
 	5450 2000 5450 2250
 Wire Wire Line
-	4650 2000 5450 2000
-Wire Wire Line
-	4650 4450 4650 2000
-Wire Wire Line
-	4800 4450 4650 4450
-Wire Wire Line
 	5550 1950 5550 2250
-Wire Wire Line
-	4600 1950 5550 1950
-Wire Wire Line
-	4600 4350 4600 1950
-Wire Wire Line
-	4800 4350 4600 4350
-Wire Wire Line
-	6600 4350 6700 4350
-Wire Wire Line
-	6700 4350 6700 2200
-Wire Wire Line
-	6700 2200 5950 2200
 Wire Wire Line
 	5950 2200 5950 2250
 Wire Wire Line
@@ -276,17 +246,7 @@ Wire Wire Line
 Wire Wire Line
 	5850 2150 5850 2250
 Wire Wire Line
-	4800 3950 4800 3000
-Wire Wire Line
-	4800 3000 5950 3000
-Wire Wire Line
 	5950 3000 5950 2750
-Wire Wire Line
-	4800 4150 4550 4150
-Wire Wire Line
-	4550 4150 4550 3100
-Wire Wire Line
-	4550 3100 5850 3100
 Wire Wire Line
 	5850 3100 5850 2750
 Wire Wire Line
@@ -305,4 +265,189 @@ Wire Wire Line
 	6850 3300 5350 3300
 Wire Wire Line
 	5350 3300 5350 2750
+$Comp
+L Device:R_Small R4
+U 1 1 5E563141
+P 6950 4650
+F 0 "R4" H 6891 4604 50  0000 R CNN
+F 1 "10kΩ" H 6891 4695 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6950 4650 50  0001 C CNN
+F 3 "~" H 6950 4650 50  0001 C CNN
+	1    6950 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5E56376D
+P 7350 4250
+F 0 "R3" H 7291 4204 50  0000 R CNN
+F 1 "10kΩ" H 7291 4295 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7350 4250 50  0001 C CNN
+F 3 "~" H 7350 4250 50  0001 C CNN
+	1    7350 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 5E563C3F
+P 4400 3500
+F 0 "R2" H 4341 3454 50  0000 R CNN
+F 1 "10kΩ" H 4341 3545 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4400 3500 50  0001 C CNN
+F 3 "~" H 4400 3500 50  0001 C CNN
+	1    4400 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6600 4550 6950 4550
+Text GLabel 4400 3400 1    50   Input ~ 0
++3.3V
+Text GLabel 6950 4750 3    50   Input ~ 0
++3.3V
+Text GLabel 7350 4150 1    50   Input ~ 0
++3.3V
+Wire Wire Line
+	5950 2200 7250 2200
+Wire Wire Line
+	7250 4350 7250 2200
+$Comp
+L Device:R_Small R5
+U 1 1 5E5A201A
+P 7350 4900
+F 0 "R5" H 7409 4946 50  0000 L CNN
+F 1 "470Ω" H 7409 4855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7350 4900 50  0001 C CNN
+F 3 "~" H 7350 4900 50  0001 C CNN
+	1    7350 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 4350 7250 4350
+Wire Wire Line
+	7250 4350 7350 4350
+Connection ~ 7250 4350
+Wire Wire Line
+	7250 4350 7250 4400
+Wire Wire Line
+	7250 4400 7350 4400
+$Comp
+L Switch:SW_Push SW2
+U 1 1 5E5AA7EE
+P 7350 4600
+F 0 "SW2" V 7304 4748 50  0000 L CNN
+F 1 "Program" V 7395 4748 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 7350 4800 50  0001 C CNN
+F 3 "~" H 7350 4800 50  0001 C CNN
+	1    7350 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5E5ADADC
+P 7350 5000
+F 0 "#PWR03" H 7350 4750 50  0001 C CNN
+F 1 "GND" H 7355 4827 50  0000 C CNN
+F 2 "" H 7350 5000 50  0001 C CNN
+F 3 "" H 7350 5000 50  0001 C CNN
+	1    7350 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5E5AE838
+P 4700 3500
+F 0 "SW1" H 4700 3785 50  0000 C CNN
+F 1 "Reset" H 4700 3694 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 4700 3700 50  0001 C CNN
+F 3 "~" H 4700 3700 50  0001 C CNN
+	1    4700 3500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 4150 4800 4150
+Connection ~ 4750 4150
+Text GLabel 5150 3400 1    50   Input ~ 0
++3.3V
+$Comp
+L Device:R_Small R1
+U 1 1 5E5639CE
+P 5150 3500
+F 0 "R1" H 5209 3546 50  0000 L CNN
+F 1 "10kΩ" H 5209 3455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5150 3500 50  0001 C CNN
+F 3 "~" H 5150 3500 50  0001 C CNN
+	1    5150 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 3750 4750 4150
+Wire Wire Line
+	4050 4550 4050 2800
+Wire Wire Line
+	4050 4550 4800 4550
+Wire Wire Line
+	4050 2800 5450 2800
+Wire Wire Line
+	4100 4450 4100 2000
+Wire Wire Line
+	4100 4450 4800 4450
+Wire Wire Line
+	4100 2000 5450 2000
+Wire Wire Line
+	4150 4350 4150 1950
+Wire Wire Line
+	4150 4350 4800 4350
+Wire Wire Line
+	4150 1950 5550 1950
+Wire Wire Line
+	4200 4250 4200 2850
+Wire Wire Line
+	4200 4250 4800 4250
+Wire Wire Line
+	4200 2850 5550 2850
+Wire Wire Line
+	4300 4150 4750 4150
+Wire Wire Line
+	4300 3100 5850 3100
+Wire Wire Line
+	4250 3950 4250 3000
+Wire Wire Line
+	4250 3000 5950 3000
+Wire Wire Line
+	4250 3950 4350 3950
+$Comp
+L power:GND #PWR02
+U 1 1 5E5DA0BD
+P 4700 3300
+F 0 "#PWR02" H 4700 3050 50  0001 C CNN
+F 1 "GND" V 4705 3172 50  0000 R CNN
+F 2 "" H 4700 3300 50  0001 C CNN
+F 3 "" H 4700 3300 50  0001 C CNN
+	1    4700 3300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4300 3100 4300 4150
+Wire Wire Line
+	4400 3600 4400 3650
+Wire Wire Line
+	4400 3650 4350 3650
+Wire Wire Line
+	4350 3650 4350 3950
+Connection ~ 4350 3950
+Wire Wire Line
+	4350 3950 4600 3950
+Wire Wire Line
+	5050 3750 5050 3600
+Wire Wire Line
+	5050 3600 5150 3600
+Wire Wire Line
+	4750 3750 5050 3750
+Wire Wire Line
+	4700 3700 4600 3700
+Wire Wire Line
+	4600 3700 4600 3950
+Connection ~ 4600 3950
+Wire Wire Line
+	4600 3950 4800 3950
 $EndSCHEMATC
