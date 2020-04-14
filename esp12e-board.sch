@@ -302,8 +302,6 @@ Wire Wire Line
 	6600 4550 6950 4550
 Text GLabel 4400 3400 1    50   Input ~ 0
 +3.3V
-Text GLabel 6950 4750 3    50   Input ~ 0
-+3.3V
 Text GLabel 7350 4150 1    50   Input ~ 0
 +3.3V
 Wire Wire Line
@@ -450,4 +448,15 @@ Wire Wire Line
 Connection ~ 4600 3950
 Wire Wire Line
 	4600 3950 4800 3950
+$Comp
+L power:GND #PWR?
+U 1 1 5E93358B
+P 6950 4750
+F 0 "#PWR?" H 6950 4500 50  0001 C CNN
+F 1 "GND" H 6955 4577 50  0000 C CNN
+F 2 "" H 6950 4750 50  0001 C CNN
+F 3 "" H 6950 4750 50  0001 C CNN
+	1    6950 4750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
